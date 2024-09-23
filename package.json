@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test --headed"
+    "test": "playwright test --headed",
+    "report": "allure generate ./allure-results --clean",
+    "open": "allure open allure-report"
   },
   "keywords": [],
   "author": "",
