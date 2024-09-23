@@ -1,1 +1,1 @@
-npm run test && npm run report
+npm install && npm run test && npm run report
