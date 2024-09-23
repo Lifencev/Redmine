@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","13084","Checking the correct order of forums and the presence of links from ""Forums"" tab","chromium","Mon Sep 23 22:02:58 EEST 2024","passed","Mon Sep 23 22:03:11 EEST 2024","5 test-cases for redmine.org","tests.spec.js","",""
+"","16131","Checking prebuilt installer from notes for Windows installation through the ""Redmine guide""","chromium","Mon Sep 23 22:02:57 EEST 2024","passed","Mon Sep 23 22:03:14 EEST 2024","5 test-cases for redmine.org","tests.spec.js","",""
+"","12904","Adding an ""Author"" column for issues from the ""Issues"" tab and applying the changes","chromium","Mon Sep 23 22:02:58 EEST 2024","passed","Mon Sep 23 22:03:11 EEST 2024","5 test-cases for redmine.org","tests.spec.js","",""
+"","7234","Checking the oldest news from ""News"" tab using pagination","chromium","Mon Sep 23 22:03:12 EEST 2024","passed","Mon Sep 23 22:03:19 EEST 2024","5 test-cases for redmine.org","tests.spec.js","",""
+"","12470","Checking the first search result for presence the word that was used in the search","chromium","Mon Sep 23 22:02:58 EEST 2024","passed","Mon Sep 23 22:03:10 EEST 2024","5 test-cases for redmine.org","tests.spec.js","",""
