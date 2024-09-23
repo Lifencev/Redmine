@@ -4,6 +4,7 @@ import { RedmineGuidePage } from '../pages/redmineGuide.page';
 import { InstallingRedminePage } from '../pages/installingRedmine.page';
 import { RubyInstallerPage } from '../pages/rubyInstaller.page';
 import { ForumsPage } from '../pages/forums.page';
+import { SearchPage } from '../pages/search.page';
 
 test.describe('5 test-cases for redmine.org', () => {
 
@@ -32,6 +33,19 @@ test.describe('5 test-cases for redmine.org', () => {
 
         const forumsPage = new ForumsPage(page);
         await forumsPage.checkAllForums();
+    });
+
+    test('Checking the first search result for presence the word that was used in the search', async ({page}) => {
+        await page.goto('/');
+
+        const homePage = new HomePage(page);
+        await homePage.clickOnSearchInput();
+        await homePage.setSearchInput('haskell');
+        await page.keyboard.press('Enter');
+
+        const searchPage = new SearchPage(page);
+        await expect(searchPage.searchInput).toHaveValue('haskell');
+        await expect(searchPage.firstResult).toContainText('haskell');
     });
 
 });
