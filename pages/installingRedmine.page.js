@@ -2,11 +2,11 @@ export class InstallingRedminePage {
 
     constructor(page) {
         this.page = page;
-        this.prebuiltInstallerRubyMRILink = 'a[href="http://rubyinstaller.org"]';
+        this.prebuiltInstallerRubyMRILink = page.locator('a[href="http://rubyinstaller.org"]');
     }
 
     async clickOnPrebuiltInstallerRubyMRILink() {
-        await this.page.click(this.prebuiltInstallerRubyMRILink);
+        await this.prebuiltInstallerRubyMRILink.click();
     }
     
 }

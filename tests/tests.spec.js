@@ -5,6 +5,7 @@ import { InstallingRedminePage } from '../pages/installingRedmine.page';
 import { RubyInstallerPage } from '../pages/rubyInstaller.page';
 import { ForumsPage } from '../pages/forums.page';
 import { SearchPage } from '../pages/search.page';
+import { IssuesPage } from '../pages/issues.page';
 
 test.describe('5 test-cases for redmine.org', () => {
 
@@ -46,6 +47,23 @@ test.describe('5 test-cases for redmine.org', () => {
         const searchPage = new SearchPage(page);
         await expect(searchPage.searchInput).toHaveValue('haskell');
         await expect(searchPage.firstResult).toContainText('haskell');
+    });
+
+    test('Adding an "Author" column for issues from the "Issues" tab and applying the changes', async ({page}) => {
+        await page.goto('/');
+
+        const homePage = new HomePage(page);
+        await homePage.clickOnIssuesTab();
+
+        const issuesPage = new IssuesPage(page);
+        await issuesPage.clickOnOptions();
+        await issuesPage.clickOnAuthorOption();
+        await issuesPage.clickOnRightArrow();
+        await issuesPage.clickOnApplyBtn();
+
+        await expect(issuesPage.options).toHaveClass('icon icon-collapsed');
+        await expect(issuesPage.authorColumn).toBeInViewport();
+        await issuesPage.checkClickableAuthorColumn();
     });
 
 });

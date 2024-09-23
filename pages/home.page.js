@@ -2,18 +2,22 @@ export class HomePage {
 
     constructor(page) {
         this.page = page;
-        this.documentationHeader = 'a[href="#Documentation"][class]';
-        this.redmineGuideLink = 'strong a[href="/projects/redmine/wiki/Guide"]';
-        this.forumsTab = 'a[href="/projects/redmine/boards"]';
+        this.redmineGuideLink = page.locator('strong a[href="/projects/redmine/wiki/Guide"]');
+        this.forumsTab = page.locator('.boards');
+        this.issuesTab = page.locator('.issues');
         this.searchInput = page.locator('#q');
     }
 
     async clickOnRedmineGuideLink() {
-        await this.page.click(this.redmineGuideLink);
+        await this.redmineGuideLink.click();
     }
 
     async clickOnForumsTab() {
-        await this.page.click(this.forumsTab);
+        await this.forumsTab.click();
+    }
+
+    async clickOnIssuesTab() {
+        await this.issuesTab.click();
     }
 
     async clickOnSearchInput() {
