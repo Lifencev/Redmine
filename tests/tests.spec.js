@@ -6,6 +6,7 @@ import { RubyInstallerPage } from '../pages/rubyInstaller.page';
 import { ForumsPage } from '../pages/forums.page';
 import { SearchPage } from '../pages/search.page';
 import { IssuesPage } from '../pages/issues.page';
+import { LastNewsPage } from '../pages/lastNews.page';
 
 test.describe('5 test-cases for redmine.org', () => {
 
@@ -64,6 +65,18 @@ test.describe('5 test-cases for redmine.org', () => {
         await expect(issuesPage.options).toHaveClass('icon icon-collapsed');
         await expect(issuesPage.authorColumn).toBeInViewport();
         await issuesPage.checkClickableAuthorColumn();
+    });
+
+    test('Checking the oldest news from "News" tab using pagination', async ({page}) => {
+        await page.goto('/');
+
+        const homePage = new HomePage(page);
+        await homePage.clickOnNewsTab();
+        await homePage.clickOnPaginationLastPageBtn();
+
+        const lastNewsPage = new LastNewsPage(page);
+        await expect(lastNewsPage.lastNews).toHaveText('New Redmine web site');
+        await expect(lastNewsPage.lastNews).toHaveAttribute('href', '/news/1');
     });
 
 });
