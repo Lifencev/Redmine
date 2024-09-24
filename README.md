@@ -7,27 +7,27 @@ The tests are designed to run on the Chromium browser, and results are captured 
 
 The repository is organized as follows:
 
-├── .github/workflows              # GitHub Actions workflow files for CI/CD pipeline
+`├── .github/workflows              # GitHub Actions workflow files for CI/CD pipeline`
 
-├── allure-report                  # Contains the generated Allure report files
+`├── allure-report                  # Contains the generated Allure report files`
 
-├── allure-results                 # Stores the test execution results used to generate reports
+`├── allure-results                 # Stores the test execution results used to generate reports`
 
-├── pages                          # Page Object Models (POM) for different web pages
+`├── pages                          # Page Object Models (POM) for different web pages`
 
-├── tests                          # Test files
+`├── tests                          # Test files`
 
-├── .gitignore                     # Contains files that git should ignore
+`├── .gitignore                     # Contains files that git should ignore`
 
-├── Redmine_test-cases.xlsx        # Excel file mapping test cases from Redmine
+`├── Redmine_test-cases.xlsx        # Excel file mapping test cases from Redmine`
 
-├── package-lock.json              # Automatically generated file for locking dependencies
+`├── package-lock.json              # Automatically generated file for locking dependencies`
 
-├── package.json                   # Node.js project file for dependencies and scripts
+`├── package.json                   # Node.js project file for dependencies and scripts`
 
-├── playwright.config.js           # Configuration file for Playwright
+`├── playwright.config.js           # Configuration file for Playwright`
 
-├── pipeline.bat                   # Batch file for running tests in a pipeline
+`├── pipeline.bat                   # Batch file for running tests in a pipeline`
 
 ## Setup
 
